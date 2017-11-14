@@ -1,0 +1,37 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="usuarioaction" extends="struts-default">
+
+		<action name="usuario.gravar" class="control.UsuarioAction"
+			method="gravar">
+			<result name="input">/index.jsp</result>
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="usuario.logar" class="control.UsuarioAction"
+			method="logar">
+			<result name="success">/admin/sistema.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="usuario.logout" class="control.UsuarioAction"
+			method="logout">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
+
+
+
+
+
+
+
